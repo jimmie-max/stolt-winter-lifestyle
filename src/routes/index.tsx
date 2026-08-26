@@ -142,11 +142,11 @@ function Home() {
       <section className="relative">
         <img
           src={heroImage}
-          alt="Four friends sitting in the snow at sunset with short skis beside them"
-          width={1920}
-          height={1088}
+          alt="Skidåkare i goggles och pjäxor med BootSki short skis spända under pjäxorna på en solig glaciär"
+          width={1282}
+          height={1845}
           fetchPriority="high"
-          className="h-[62vh] min-h-[420px] w-full object-cover md:h-[76vh]"
+          className="h-[62vh] min-h-[420px] w-full object-cover object-[center_35%] md:h-[76vh]"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-ink/85 via-ink/40 to-transparent" />
         <div className="absolute inset-0 flex items-center">
