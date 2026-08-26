@@ -2,9 +2,9 @@ import { Link, createFileRoute } from "@tanstack/react-router";
 
 import { SectionHead } from "@/components/site/Sections";
 
-const TITLE = "About Stolt of Sweden — compact skiing from Sweden";
+const TITLE = "About Stolt of Sweden — the BootSki story from Sweden";
 const DESCRIPTION =
-  "Stolt of Sweden is a Swedish brand behind BootSki, the world's smallest ski with a design patented design, and the ST-50 ski goggles. We ship directly from Sweden.";
+  "Stolt of Sweden is the Swedish brand behind BootSki, created by skiers Tobias and Oskar. Read how a childhood experiment — sawing off skis and selling them to friends — became a design-patented short ski built for freedom and fun.";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
