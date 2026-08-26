@@ -5,9 +5,10 @@ import { SectionHead } from "@/components/site/Sections";
 import { BUNDLE_TIERS } from "@/lib/cart";
 import { BOOTSKI } from "@/lib/products";
 
-const TITLE = "Buy BootSki short skis — Stolt of Sweden";
+const TITLE = "Short skis for adults & kids — BootSki | Stolt of Sweden";
 const DESCRIPTION =
-  "Shop BootSki compact short skis in adult and kids sizes. Universal fit for all DIN-type ski boots. Shipped directly from Sweden.";
+  "Shop BootSki short skis — fun, compact skis not much longer than the sole of a ski boot. Adult and kids sizes, universal fit for all DIN-type ski boots. Shipped from Sweden.";
+
 
 export const Route = createFileRoute("/bootski")({
   head: () => ({
@@ -60,12 +61,14 @@ function BootskiPage() {
     <>
       <section className="bg-ink text-ink-foreground">
         <div className="shell py-16">
-          <SectionHead eyebrow="Bootski" title={<>Short skis.<br />Big fun.</>}>
+          <SectionHead eyebrow="Short skis · Bootski" title={<>Short skis.<br />Big fun.</>}>
             <p className="text-ink-foreground/75">
-              The world&apos;s smallest ski with a design patented design. Universal fit,
-              compatible with all DIN-type ski boots. Every pair ships with a storage bag and
-              two extra metal strings for binding adjustment.
+              BootSki is the world&apos;s smallest ski with a design patented design — a short
+              ski not much longer than the sole of a ski boot. Universal fit, compatible with
+              all DIN-type ski boots. Every pair ships with a storage bag and two extra metal
+              strings for binding adjustment.
             </p>
+
           </SectionHead>
         </div>
       </section>
