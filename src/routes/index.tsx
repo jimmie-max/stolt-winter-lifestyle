@@ -107,13 +107,18 @@ const GOGGLE_FEATURES = [
 
 const FAQ = [
   {
+    q: "What is a short ski?",
+    a: "A short ski is a ski that is far shorter than a traditional ski. BootSki is a short ski that is not much longer than the sole of a ski boot — small and light enough to bring anywhere.",
+  },
+  {
     q: "What is BootSki?",
     a: "The world's smallest ski with a design patented design. A perfect add-on and a fun alternative to traditional skis, enhancing your slope experience.",
   },
   {
-    q: "Do BootSki work with regular ski boots?",
+    q: "Do BootSki short skis work with regular ski boots?",
     a: "Universal fit — compatible with all DIN-type ski boots.",
   },
+
   {
     q: "Which size should I buy?",
     a: "BootSkis come in three sizes. Adults and teenagers most likely need Adult Medium or Adult Large. Younger kids most likely need Kids size (the same as Small in the size chart).",
