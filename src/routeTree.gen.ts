@@ -14,6 +14,8 @@ import { Route as AboutRouteImport } from './routes/about'
 import { Route as BootskiRouteImport } from './routes/bootski'
 import { Route as FaqRouteImport } from './routes/faq'
 import { Route as GogglesRouteImport } from './routes/goggles'
+import { Route as SizeGuideRouteImport } from './routes/size-guide'
+import { Route as ManualsSt50RouteImport } from './routes/manuals.st-50'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -40,6 +42,16 @@ const GogglesRoute = GogglesRouteImport.update({
   path: '/goggles',
   getParentRoute: () => rootRouteImport,
 } as any)
+const SizeGuideRoute = SizeGuideRouteImport.update({
+  id: '/size-guide',
+  path: '/size-guide',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ManualsSt50Route = ManualsSt50RouteImport.update({
+  id: '/manuals/st-50',
+  path: '/manuals/st-50',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -47,6 +59,8 @@ export interface FileRoutesByFullPath {
   '/bootski': typeof BootskiRoute
   '/faq': typeof FaqRoute
   '/goggles': typeof GogglesRoute
+  '/size-guide': typeof SizeGuideRoute
+  '/manuals/st-50': typeof ManualsSt50Route
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -54,6 +68,8 @@ export interface FileRoutesByTo {
   '/bootski': typeof BootskiRoute
   '/faq': typeof FaqRoute
   '/goggles': typeof GogglesRoute
+  '/size-guide': typeof SizeGuideRoute
+  '/manuals/st-50': typeof ManualsSt50Route
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -62,13 +78,37 @@ export interface FileRoutesById {
   '/bootski': typeof BootskiRoute
   '/faq': typeof FaqRoute
   '/goggles': typeof GogglesRoute
+  '/size-guide': typeof SizeGuideRoute
+  '/manuals/st-50': typeof ManualsSt50Route
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/about' | '/bootski' | '/faq' | '/goggles'
+  fullPaths:
+    | '/'
+    | '/about'
+    | '/bootski'
+    | '/faq'
+    | '/goggles'
+    | '/size-guide'
+    | '/manuals/st-50'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/about' | '/bootski' | '/faq' | '/goggles'
-  id: '__root__' | '/' | '/about' | '/bootski' | '/faq' | '/goggles'
+  to:
+    | '/'
+    | '/about'
+    | '/bootski'
+    | '/faq'
+    | '/goggles'
+    | '/size-guide'
+    | '/manuals/st-50'
+  id:
+    | '__root__'
+    | '/'
+    | '/about'
+    | '/bootski'
+    | '/faq'
+    | '/goggles'
+    | '/size-guide'
+    | '/manuals/st-50'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -77,6 +117,8 @@ export interface RootRouteChildren {
   BootskiRoute: typeof BootskiRoute
   FaqRoute: typeof FaqRoute
   GogglesRoute: typeof GogglesRoute
+  SizeGuideRoute: typeof SizeGuideRoute
+  ManualsSt50Route: typeof ManualsSt50Route
 }
 
 declare module '@tanstack/react-router' {
@@ -116,6 +158,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof GogglesRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/size-guide': {
+      id: '/size-guide'
+      path: '/size-guide'
+      fullPath: '/size-guide'
+      preLoaderRoute: typeof SizeGuideRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/manuals/st-50': {
+      id: '/manuals/st-50'
+      path: '/manuals/st-50'
+      fullPath: '/manuals/st-50'
+      preLoaderRoute: typeof ManualsSt50RouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -125,6 +181,8 @@ const rootRouteChildren: RootRouteChildren = {
   BootskiRoute: BootskiRoute,
   FaqRoute: FaqRoute,
   GogglesRoute: GogglesRoute,
+  SizeGuideRoute: SizeGuideRoute,
+  ManualsSt50Route: ManualsSt50Route,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
