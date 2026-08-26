@@ -60,7 +60,7 @@ function AboutPage() {
             function, flexibility and performance. They can be both waxed and sharpened.
           </p>
           <p className="mt-4 text-base leading-relaxed">
-            ST-50 — one goggle, two lenses. Built for long days on the mountain, developed
+            Ski Goggles model ST-50 — one goggle, two lenses. Built for long days on the mountain, developed
             and carefully tested by us at Stolt of Sweden.
           </p>
           <div className="mt-8 flex gap-3">
