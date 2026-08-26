@@ -192,17 +192,19 @@ function Home() {
       <section className="bg-ink text-ink-foreground">
         <div className="shell grid items-center gap-12 py-20 lg:grid-cols-2">
           <div>
-            <SectionHead eyebrow="Bootski" title={<>Short skis.<br />Big fun.</>}>
+            <SectionHead eyebrow="Short skis · Bootski" title={<>Short skis.<br />Big fun.</>}>
               <p className="text-ink-foreground/75">
-                The world&apos;s smallest ski with a design patented design. Minimalistic yet
-                carefully engineered for function, flexibility and performance — and they can
-                be both waxed and sharpened.
+                BootSki is the world&apos;s smallest ski with a design patented design — a short
+                ski not much longer than the sole of a ski boot. Minimalistic yet carefully
+                engineered for function, flexibility and performance, and they can be both
+                waxed and sharpened.
               </p>
             </SectionHead>
             <div className="mt-8 flex flex-wrap items-center gap-6">
               <Link to="/bootski" className="btn-brand">
-                Shop Bootski
+                Shop short skis
               </Link>
+
               <ArrowLink to="/size-guide" light>
                 Size guide
               </ArrowLink>
