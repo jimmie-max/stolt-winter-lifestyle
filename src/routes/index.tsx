@@ -61,7 +61,7 @@ export const Route = createFileRoute("/")({
               name: "What lenses are included with the ST-50 goggles?",
               acceptedAnswer: {
                 "@type": "Answer",
-                text: "ST-50 ships with an S3 Grey/Silver Mirror main lens fitted and an S1 Clear Grey spare lens for fog or flat light, swapped in seconds with the magnetic Lens Quick Change System.",
+                text: "ST-50 ships with two lenses: an S3 (Cat. 3) Grey/Silver Mirror lens fitted as standard for bright sun and glare, and an S1 (Cat. 1) Clear Grey spare lens for fog, snowfall, flat light and other bad conditions. Lenses swap in seconds with the magnetic Lens Quick Change System.",
               },
             },
             {
@@ -99,7 +99,7 @@ const PILLARS = [
 ];
 
 const GOGGLE_FEATURES = [
-  { icon: Eye, title: "Two lenses", body: "S3 mirror fitted, S1 clear spare included." },
+  { icon: Eye, title: "Two lenses", body: "S3 (Cat. 3) mirror fitted, S1 (Cat. 1) clear spare included." },
   { icon: Magnet, title: "Magnetic swap", body: "Lens Quick Change System, in seconds." },
   { icon: Sparkles, title: "Anti-fog", body: "100% UV400 protection and anti-fog coating." },
   { icon: MountainSnow, title: "Wide view", body: "Double Lens Toric for a wider field of view." },
@@ -125,7 +125,7 @@ const FAQ = [
   },
   {
     q: "What lenses are included with the ST-50 goggles?",
-    a: "An S3 Grey/Silver Mirror main lens fitted as standard, plus an S1 Clear Grey spare lens for fog or flat light — swapped in seconds with the magnetic Lens Quick Change System.",
+    a: "An S3 (Cat. 3) Grey/Silver Mirror lens fitted as standard for bright sun, plus an S1 (Cat. 1) Clear Grey spare lens for fog, snowfall and flat light — swapped in seconds with the magnetic Lens Quick Change System.",
   },
   {
     q: "How long does shipping take?",
