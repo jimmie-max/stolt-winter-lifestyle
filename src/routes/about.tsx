@@ -33,6 +33,7 @@ const PRESS = [
       "Leading the way with Stolt of Sweden: With 80,000 followers, the revolutionary Swedish Short Skis launch the new season.",
     author: "Angelo Bonorino",
     source: "Neve Italia",
+    url: "https://www.neveitalia.it/test/news/in-cima-alla-curva-con-stolt-of-sweden-con-80-000-followers-i-rivoluzionari-sci-corti-svedesi-lanciano-la-nuova-stagione",
   },
 ];
 
@@ -79,9 +80,21 @@ function AboutPage() {
               <blockquote className="font-display text-lg font-semibold leading-snug">
                 “{p.quote}”
               </blockquote>
-              <figcaption className="mt-4 text-sm text-muted-foreground">
-                {p.author} — {p.source}
-              </figcaption>
+            <figcaption className="mt-4 text-sm text-muted-foreground">
+              {p.author} —{" "}
+              {p.url ? (
+                <a
+                  href={p.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline underline-offset-2 hover:text-primary"
+                >
+                  {p.source}
+                </a>
+              ) : (
+                p.source
+              )}
+            </figcaption>
             </figure>
           ))}
         </div>
