@@ -5,8 +5,9 @@ import ctaMountains from "@/assets/cta-mountains.jpg";
 import heroImage from "@/assets/hero-justgo.jpg";
 import lensBright from "@/assets/lens-brightsun.jpg";
 import lensLow from "@/assets/lens-lowlight.jpg";
+import stefanoAction from "@/assets/stefano-ski-instructor.jpg.asset.json";
 import { ArrowLink, FaqList, SectionHead } from "@/components/site/Sections";
-import { BOOTSKI, ST50, formatSEK } from "@/lib/products";
+import { ST50, formatSEK } from "@/lib/products";
 
 const TITLE = "Short skis & fun skis — BootSki by Stolt of Sweden";
 const DESCRIPTION =
@@ -134,8 +135,6 @@ const FAQ = [
 ];
 
 function Home() {
-  const featured = BOOTSKI.filter((p) => p.available).slice(0, 5);
-
   return (
     <>
       {/* Hero */}
@@ -200,39 +199,21 @@ function Home() {
                 waxed and sharpened.
               </p>
             </SectionHead>
-            <div className="mt-8 flex flex-wrap items-center gap-6">
+            <div className="mt-8">
               <Link to="/bootski" className="btn-brand">
-                Shop short skis
+                shop Bootski
               </Link>
-
-              <ArrowLink to="/size-guide" light>
-                Size guide
-              </ArrowLink>
             </div>
           </div>
 
-          <div className="grid grid-cols-5 gap-3">
-            {featured.map((p) => (
-              <Link
-                key={p.handle}
-                to="/bootski"
-                className="group bg-ink-foreground/5 p-2 transition-colors hover:bg-ink-foreground/10"
-                aria-label={`Shop ${p.shortTitle} ${p.colour}`}
-              >
-                <img
-                  src={p.image}
-                  alt={p.imageAlt}
-                  width={240}
-                  height={320}
-                  loading="lazy"
-                  className="aspect-[3/4] w-full object-contain"
-                />
-                <p className="mt-2 text-center text-[10px] uppercase tracking-wider text-ink-foreground/60">
-                  {p.colour}
-                </p>
-              </Link>
-            ))}
-          </div>
+          <img
+            src={stefanoAction.url}
+            alt="Skidåkare i blå dräkt som carvar i pudersnö — BootSki short skis ger frihet och rolig åkning"
+            width={1280}
+            height={719}
+            loading="lazy"
+            className="aspect-video w-full object-cover"
+          />
         </div>
       </section>
 
@@ -240,7 +221,7 @@ function Home() {
       <section className="bg-bone">
         <div className="shell grid items-end gap-8 pt-16 lg:grid-cols-2">
           <div>
-            <SectionHead eyebrow="Goggles" title={<>One goggle.<br />That&apos;s it.</>}>
+            <SectionHead eyebrow="Ski goggles" title={<>One goggle.<br />That&apos;s it.</>}>
               <p className="text-muted-foreground">
                 ST-50 ski goggles ship with two lenses — an S3 (Cat. 3) mirror lens for bright
                 sun and an S1 (Cat. 1) clear grey lens for fog and bad conditions. One goggle,

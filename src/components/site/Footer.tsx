@@ -9,7 +9,7 @@ const COLUMNS = [
     title: "Shop",
     links: [
       { label: "Short skis", to: "/bootski" as const },
-      { label: "Goggles", to: "/goggles" as const },
+      { label: "Ski goggles", to: "/goggles" as const },
     ],
   },
   {
