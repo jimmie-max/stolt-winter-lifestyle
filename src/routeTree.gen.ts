@@ -10,33 +10,73 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AboutRouteImport } from './routes/about'
+import { Route as BootskiRouteImport } from './routes/bootski'
+import { Route as FaqRouteImport } from './routes/faq'
+import { Route as GogglesRouteImport } from './routes/goggles'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AboutRoute = AboutRouteImport.update({
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BootskiRoute = BootskiRouteImport.update({
+  id: '/bootski',
+  path: '/bootski',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FaqRoute = FaqRouteImport.update({
+  id: '/faq',
+  path: '/faq',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GogglesRoute = GogglesRouteImport.update({
+  id: '/goggles',
+  path: '/goggles',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/bootski': typeof BootskiRoute
+  '/faq': typeof FaqRoute
+  '/goggles': typeof GogglesRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/bootski': typeof BootskiRoute
+  '/faq': typeof FaqRoute
+  '/goggles': typeof GogglesRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/bootski': typeof BootskiRoute
+  '/faq': typeof FaqRoute
+  '/goggles': typeof GogglesRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths: '/' | '/about' | '/bootski' | '/faq' | '/goggles'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to: '/' | '/about' | '/bootski' | '/faq' | '/goggles'
+  id: '__root__' | '/' | '/about' | '/bootski' | '/faq' | '/goggles'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AboutRoute: typeof AboutRoute
+  BootskiRoute: typeof BootskiRoute
+  FaqRoute: typeof FaqRoute
+  GogglesRoute: typeof GogglesRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +88,43 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/bootski': {
+      id: '/bootski'
+      path: '/bootski'
+      fullPath: '/bootski'
+      preLoaderRoute: typeof BootskiRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/faq': {
+      id: '/faq'
+      path: '/faq'
+      fullPath: '/faq'
+      preLoaderRoute: typeof FaqRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/goggles': {
+      id: '/goggles'
+      path: '/goggles'
+      fullPath: '/goggles'
+      preLoaderRoute: typeof GogglesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AboutRoute: AboutRoute,
+  BootskiRoute: BootskiRoute,
+  FaqRoute: FaqRoute,
+  GogglesRoute: GogglesRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
