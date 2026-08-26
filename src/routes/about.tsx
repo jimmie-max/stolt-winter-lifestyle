@@ -80,9 +80,21 @@ function AboutPage() {
               <blockquote className="font-display text-lg font-semibold leading-snug">
                 “{p.quote}”
               </blockquote>
-              <figcaption className="mt-4 text-sm text-muted-foreground">
-                {p.author} — {p.source}
-              </figcaption>
+            <figcaption className="mt-4 text-sm text-muted-foreground">
+              {p.author} —{" "}
+              {p.url ? (
+                <a
+                  href={p.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline underline-offset-2 hover:text-primary"
+                >
+                  {p.source}
+                </a>
+              ) : (
+                p.source
+              )}
+            </figcaption>
             </figure>
           ))}
         </div>
