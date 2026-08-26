@@ -250,7 +250,7 @@ function Home() {
             </p>
             <div className="mt-8 flex flex-wrap items-center gap-6">
               <Link to="/goggles" className="btn-brand">
-                Explore ST-50
+                Shop goggles
               </Link>
               <ArrowLink to="/manuals/st-50">Manual</ArrowLink>
             </div>
@@ -330,7 +330,7 @@ function Home() {
             <span className="text-primary">Just go.</span>
           </h2>
           <Link to="/bootski" className="btn-brand mt-8">
-            Shop Bootski
+            Shop short skis
           </Link>
         </div>
       </section>
