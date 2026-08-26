@@ -5,7 +5,7 @@ import ctaMountains from "@/assets/cta-mountains.jpg";
 import heroImage from "@/assets/hero-justgo.jpg";
 import lensBright from "@/assets/lens-brightsun.jpg";
 import lensLow from "@/assets/lens-lowlight.jpg";
-import stefanoAction from "@/assets/stefano-ski-instructor.jpg.asset.json";
+import bootskiCloseup from "@/assets/bootski-closeup.webp.asset.json";
 import { ArrowLink, FaqList, SectionHead } from "@/components/site/Sections";
 import { ST50, formatSEK } from "@/lib/products";
 
@@ -189,7 +189,7 @@ function Home() {
 
       {/* Bootski */}
       <section className="bg-ink text-ink-foreground">
-        <div className="shell grid items-center gap-12 py-20 lg:grid-cols-2">
+        <div className="shell grid items-center gap-12 py-20 lg:grid-cols-[1fr_0.85fr]">
           <div>
             <SectionHead eyebrow="Short skis · Bootski" title={<>Short skis.<br />Big fun.</>}>
               <p className="text-ink-foreground/75">
@@ -206,14 +206,16 @@ function Home() {
             </div>
           </div>
 
-          <img
-            src={stefanoAction.url}
-            alt="Skidåkare i blå dräkt som carvar i pudersnö — BootSki short skis ger frihet och rolig åkning"
-            width={1280}
-            height={719}
-            loading="lazy"
-            className="aspect-video w-full object-cover"
-          />
+          <div className="flex items-center justify-center">
+            <img
+              src={bootskiCloseup.url}
+              alt="BootSki short ski fast under pjäxa — närbild som visar den patenterade designen och universal-bindningen"
+              width={256}
+              height={144}
+              loading="lazy"
+              className="w-full max-w-lg rounded-lg object-cover"
+            />
+          </div>
         </div>
       </section>
 
