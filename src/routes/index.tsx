@@ -8,9 +8,10 @@ import lensLow from "@/assets/lens-lowlight.jpg";
 import { ArrowLink, FaqList, SectionHead } from "@/components/site/Sections";
 import { BOOTSKI, ST50, formatSEK } from "@/lib/products";
 
-const TITLE = "Just go. — Stolt of Sweden short skis & ST-50 goggles";
+const TITLE = "Short skis & fun skis — BootSki by Stolt of Sweden";
 const DESCRIPTION =
-  "A simpler way to enjoy winter. BootSki compact short skis that fit all DIN-type ski boots, and ST-50 goggles with two lenses included. Designed in Sweden.";
+  "Just go. BootSki is a short ski barely longer than the sole of a ski boot — a fun, compact ski that fits all DIN-type ski boots. Plus ST-50 goggles with two lenses. Designed in Sweden.";
+
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -32,20 +33,29 @@ export const Route = createFileRoute("/")({
           mainEntity: [
             {
               "@type": "Question",
-              name: "What is BootSki?",
+              name: "What is a short ski?",
               acceptedAnswer: {
                 "@type": "Answer",
-                text: "BootSki is the world's smallest ski with a design patented design. It is a compact short ski that works as an add-on to your slope experience.",
+                text: "A short ski is a ski that is far shorter than a traditional ski. BootSki is a short ski that is not much longer than the sole of a ski boot, which makes it small and light enough to bring anywhere.",
               },
             },
             {
               "@type": "Question",
-              name: "Do BootSki work with regular ski boots?",
+              name: "What is BootSki?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "BootSki is the world's smallest ski with a design patented design — a short ski not much longer than the sole of a ski boot. It works as a fun add-on to your slope experience.",
+              },
+            },
+            {
+              "@type": "Question",
+              name: "Do BootSki short skis work with regular ski boots?",
               acceptedAnswer: {
                 "@type": "Answer",
                 text: "Yes. BootSki has a universal fit and is compatible with all DIN-type ski boots.",
               },
             },
+
             {
               "@type": "Question",
               name: "What lenses are included with the ST-50 goggles?",
