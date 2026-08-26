@@ -7,7 +7,7 @@ import { useCart } from "@/lib/cart";
 
 const NAV = [
   { to: "/bootski", label: "Short skis" },
-  { to: "/goggles", label: "Goggles" },
+  { to: "/goggles", label: "Ski goggles" },
   { to: "/manuals/st-50", label: "Manuals" },
   { to: "/about", label: "About" },
 ] as const;

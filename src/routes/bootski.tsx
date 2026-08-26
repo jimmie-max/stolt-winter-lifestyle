@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 
-import bootskiInHand from "@/assets/bootski-in-hand.jpg";
+import bootskiCloseup from "@/assets/bootski-closeup.webp.asset.json";
 import { ProductCard } from "@/components/site/ProductCard";
 import { SectionHead } from "@/components/site/Sections";
 import { BUNDLE_TIERS } from "@/lib/cart";
@@ -61,7 +61,7 @@ function BootskiPage() {
   return (
     <>
       <section className="bg-ink text-ink-foreground">
-        <div className="shell grid items-center gap-12 py-16 lg:grid-cols-2">
+        <div className="shell grid items-center gap-12 py-16 lg:grid-cols-[1fr_0.85fr]">
           <SectionHead eyebrow="Short skis · Bootski" title={<>Short skis.<br />Big fun.</>}>
             <p className="text-ink-foreground/75">
               BootSki is the world&apos;s smallest ski with a design patented design — a short
@@ -69,15 +69,17 @@ function BootskiPage() {
               all DIN-type ski boots. Every pair ships with a storage bag and two extra metal
               strings for binding adjustment.
             </p>
-
           </SectionHead>
-          <img
-            src={bootskiInHand}
-            alt="A skier carrying a pair of black BootSki short skis in one hand on a sunny groomed slope — each ski barely longer than the sole of a ski boot"
-            width={1600}
-            height={1200}
-            className="aspect-[4/3] w-full object-cover"
-          />
+          <div className="flex items-center justify-center">
+            <img
+              src={bootskiCloseup.url}
+              alt="BootSki short ski fast under pjäxa — närbild som visar den patenterade designen och universal-bindningen"
+              width={256}
+              height={144}
+              loading="lazy"
+              className="w-full max-w-lg rounded-lg object-cover"
+            />
+          </div>
         </div>
       </section>
 
