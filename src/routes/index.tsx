@@ -154,17 +154,19 @@ function Home() {
             <h1 className="display-xl text-6xl text-ink-foreground sm:text-7xl md:text-8xl">
               Just go.
             </h1>
-            <p className="mt-5 max-w-xs text-lg text-ink-foreground/90">
-              A simpler way to enjoy winter.
+            <p className="mt-5 max-w-sm text-lg text-ink-foreground/90">
+              A simpler way to enjoy winter. Short skis barely longer than your boot,
+              and one goggle for every light.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link to="/bootski" className="btn-brand">
-                Shop Bootski
+                Shop short skis
               </Link>
               <Link to="/goggles" className="btn-outline-light">
-                Explore ST-50
+                Shop goggles
               </Link>
             </div>
+
           </div>
         </div>
       </section>
