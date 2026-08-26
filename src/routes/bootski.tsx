@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 
-import bootskiCloseup from "@/assets/bootski-closeup.webp.asset.json";
+import stefanoSkiInstructor from "@/assets/stefano-ski-instructor-2.jpg.asset.json";
 import { ProductCard } from "@/components/site/ProductCard";
 import { SectionHead } from "@/components/site/Sections";
 import { BUNDLE_TIERS } from "@/lib/cart";
@@ -72,12 +72,12 @@ function BootskiPage() {
           </SectionHead>
           <div className="flex items-center justify-center">
             <img
-              src={bootskiCloseup.url}
-              alt="BootSki short ski fast under pjäxa — närbild som visar den patenterade designen och universal-bindningen"
-              width={256}
-              height={144}
+              src={stefanoSkiInstructor.url}
+              alt="Skidåkare som carvar i italienska alperna med BootSki short skis — kompakta skidor utan stavar"
+              width={1280}
+              height={719}
               loading="lazy"
-              className="w-full max-w-lg rounded-lg object-cover"
+              className="aspect-[16/9] w-full rounded-lg object-cover"
             />
           </div>
         </div>
