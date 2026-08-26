@@ -6,7 +6,7 @@ import logo from "@/assets/stolt-logo.png.asset.json";
 import { useCart } from "@/lib/cart";
 
 const NAV = [
-  { to: "/bootski", label: "Bootski" },
+  { to: "/bootski", label: "Short skis" },
   { to: "/goggles", label: "Goggles" },
   { to: "/manuals/st-50", label: "Manuals" },
   { to: "/about", label: "About" },
