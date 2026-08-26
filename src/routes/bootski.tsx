@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 
+import bootskiInHand from "@/assets/bootski-in-hand.jpg";
 import { ProductCard } from "@/components/site/ProductCard";
 import { SectionHead } from "@/components/site/Sections";
 import { BUNDLE_TIERS } from "@/lib/cart";
