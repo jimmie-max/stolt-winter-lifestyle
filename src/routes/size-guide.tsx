@@ -53,7 +53,7 @@ function SizeGuidePage() {
         </p>
         <div className="mt-8 flex gap-3">
           <Link to="/bootski" className="btn-brand">
-            Shop Bootski
+            Shop short skis
           </Link>
           <Link to="/manuals/st-50" className="btn-outline-dark">
             Manuals

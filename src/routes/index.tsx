@@ -8,9 +8,10 @@ import lensLow from "@/assets/lens-lowlight.jpg";
 import { ArrowLink, FaqList, SectionHead } from "@/components/site/Sections";
 import { BOOTSKI, ST50, formatSEK } from "@/lib/products";
 
-const TITLE = "Just go. — Stolt of Sweden short skis & ST-50 goggles";
+const TITLE = "Short skis & fun skis — BootSki by Stolt of Sweden";
 const DESCRIPTION =
-  "A simpler way to enjoy winter. BootSki compact short skis that fit all DIN-type ski boots, and ST-50 goggles with two lenses included. Designed in Sweden.";
+  "Just go. BootSki is a short ski barely longer than the sole of a ski boot — a fun, compact ski that fits all DIN-type ski boots. Plus ST-50 goggles with two lenses. Designed in Sweden.";
+
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -32,20 +33,29 @@ export const Route = createFileRoute("/")({
           mainEntity: [
             {
               "@type": "Question",
-              name: "What is BootSki?",
+              name: "What is a short ski?",
               acceptedAnswer: {
                 "@type": "Answer",
-                text: "BootSki is the world's smallest ski with a design patented design. It is a compact short ski that works as an add-on to your slope experience.",
+                text: "A short ski is a ski that is far shorter than a traditional ski. BootSki is a short ski that is not much longer than the sole of a ski boot, which makes it small and light enough to bring anywhere.",
               },
             },
             {
               "@type": "Question",
-              name: "Do BootSki work with regular ski boots?",
+              name: "What is BootSki?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "BootSki is the world's smallest ski with a design patented design — a short ski not much longer than the sole of a ski boot. It works as a fun add-on to your slope experience.",
+              },
+            },
+            {
+              "@type": "Question",
+              name: "Do BootSki short skis work with regular ski boots?",
               acceptedAnswer: {
                 "@type": "Answer",
                 text: "Yes. BootSki has a universal fit and is compatible with all DIN-type ski boots.",
               },
             },
+
             {
               "@type": "Question",
               name: "What lenses are included with the ST-50 goggles?",
@@ -97,13 +107,18 @@ const GOGGLE_FEATURES = [
 
 const FAQ = [
   {
+    q: "What is a short ski?",
+    a: "A short ski is a ski that is far shorter than a traditional ski. BootSki is a short ski that is not much longer than the sole of a ski boot — small and light enough to bring anywhere.",
+  },
+  {
     q: "What is BootSki?",
     a: "The world's smallest ski with a design patented design. A perfect add-on and a fun alternative to traditional skis, enhancing your slope experience.",
   },
   {
-    q: "Do BootSki work with regular ski boots?",
+    q: "Do BootSki short skis work with regular ski boots?",
     a: "Universal fit — compatible with all DIN-type ski boots.",
   },
+
   {
     q: "Which size should I buy?",
     a: "BootSkis come in three sizes. Adults and teenagers most likely need Adult Medium or Adult Large. Younger kids most likely need Kids size (the same as Small in the size chart).",
@@ -139,17 +154,19 @@ function Home() {
             <h1 className="display-xl text-6xl text-ink-foreground sm:text-7xl md:text-8xl">
               Just go.
             </h1>
-            <p className="mt-5 max-w-xs text-lg text-ink-foreground/90">
-              A simpler way to enjoy winter.
+            <p className="mt-5 max-w-sm text-lg text-ink-foreground/90">
+              A simpler way to enjoy winter. Short skis barely longer than your boot,
+              and one goggle for every light.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link to="/bootski" className="btn-brand">
-                Shop Bootski
+                Shop short skis
               </Link>
               <Link to="/goggles" className="btn-outline-light">
-                Explore ST-50
+                Shop goggles
               </Link>
             </div>
+
           </div>
         </div>
       </section>
@@ -175,17 +192,19 @@ function Home() {
       <section className="bg-ink text-ink-foreground">
         <div className="shell grid items-center gap-12 py-20 lg:grid-cols-2">
           <div>
-            <SectionHead eyebrow="Bootski" title={<>Short skis.<br />Big fun.</>}>
+            <SectionHead eyebrow="Short skis · Bootski" title={<>Short skis.<br />Big fun.</>}>
               <p className="text-ink-foreground/75">
-                The world&apos;s smallest ski with a design patented design. Minimalistic yet
-                carefully engineered for function, flexibility and performance — and they can
-                be both waxed and sharpened.
+                BootSki is the world&apos;s smallest ski with a design patented design — a short
+                ski not much longer than the sole of a ski boot. Minimalistic yet carefully
+                engineered for function, flexibility and performance, and they can be both
+                waxed and sharpened.
               </p>
             </SectionHead>
             <div className="mt-8 flex flex-wrap items-center gap-6">
               <Link to="/bootski" className="btn-brand">
-                Shop Bootski
+                Shop short skis
               </Link>
+
               <ArrowLink to="/size-guide" light>
                 Size guide
               </ArrowLink>
@@ -231,7 +250,7 @@ function Home() {
             </p>
             <div className="mt-8 flex flex-wrap items-center gap-6">
               <Link to="/goggles" className="btn-brand">
-                Explore ST-50
+                Shop goggles
               </Link>
               <ArrowLink to="/manuals/st-50">Manual</ArrowLink>
             </div>
@@ -311,7 +330,7 @@ function Home() {
             <span className="text-primary">Just go.</span>
           </h2>
           <Link to="/bootski" className="btn-brand mt-8">
-            Shop Bootski
+            Shop short skis
           </Link>
         </div>
       </section>
