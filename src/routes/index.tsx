@@ -238,66 +238,86 @@ function Home() {
 
       {/* Goggles */}
       <section className="bg-bone">
-        <div className="shell grid items-start gap-12 py-20 lg:grid-cols-2">
+        <div className="shell grid items-end gap-8 pt-16 lg:grid-cols-2">
           <div>
             <SectionHead eyebrow="Goggles" title={<>One goggle.<br />That&apos;s it.</>}>
               <p className="text-muted-foreground">
-                Two lenses included. Ready for whatever the mountain brings.
+                ST-50 ski goggles ship with two lenses — an S3 (Cat. 3) mirror lens for bright
+                sun and an S1 (Cat. 1) clear grey lens for fog and bad conditions. One goggle,
+                every light.
               </p>
             </SectionHead>
-            <p className="mt-6 font-display text-sm font-semibold">
+            <p className="mt-4 font-display text-sm font-semibold">
               {formatSEK(ST50.price)} · {ST50.note}
             </p>
-            <div className="mt-8 flex flex-wrap items-center gap-6">
-              <Link to="/goggles" className="btn-brand">
-                Shop goggles
-              </Link>
-              <ArrowLink to="/manuals/st-50">Manual</ArrowLink>
-            </div>
           </div>
-
-          <div>
-            <img
-              src={ST50.image}
-              alt={ST50.imageAlt}
-              width={900}
-              height={600}
-              loading="lazy"
-              className="w-full object-contain"
-            />
-            <dl className="mt-8 grid grid-cols-2 gap-6 sm:grid-cols-4">
-              {GOGGLE_FEATURES.map(({ icon: Icon, title, body }) => (
-                <div key={title}>
-                  <Icon className="h-5 w-5" strokeWidth={1.4} />
-                  <dt className="eyebrow mt-3">{title}</dt>
-                  <dd className="mt-1 text-xs leading-relaxed text-muted-foreground">{body}</dd>
-                </div>
-              ))}
-            </dl>
+          <div className="flex flex-wrap items-center gap-6 lg:justify-end">
+            <Link to="/goggles" className="btn-brand">
+              Shop goggles
+            </Link>
+            <ArrowLink to="/manuals/st-50">Manual</ArrowLink>
           </div>
         </div>
 
-        <div className="shell grid gap-4 pb-20 sm:grid-cols-2">
+        <div className="shell mt-8">
+          <img
+            src={ST50.image}
+            alt={ST50.imageAlt}
+            width={1122}
+            height={430}
+            loading="lazy"
+            className="aspect-[21/8] w-full object-cover [object-position:center_22%]"
+          />
+        </div>
+
+        <div className="shell mt-8 grid gap-4 sm:grid-cols-2">
           {[
-            { src: lensBright, label: "S3 mirror — bright sun", alt: "Sunlit alpine ridge in bright light" },
-            { src: lensLow, label: "S1 clear grey — fog and flat light", alt: "Foggy alpine forest in flat light" },
+            {
+              src: lensBright,
+              tag: "S3 / Cat. 3",
+              title: "Grey / Silver Mirror — bright sun",
+              body:
+                "The lens fitted as standard. Built for bluebird days, high alpine glare and sun reflecting off open snow, where a category 3 mirror lens cuts the strongest light and keeps contrast in the piste.",
+              alt: "Sunlit alpine ridge in bright light, suited to the S3 category 3 mirror lens",
+            },
+            {
+              src: lensLow,
+              tag: "S1 / Cat. 1",
+              title: "Clear Grey — fog and flat light",
+              body:
+                "The included spare lens. Made for bad conditions: fog, snowfall, flat light, tree runs and late afternoons, where a category 1 lens lets through the most light so you can still read the terrain. Swaps in seconds with the magnetic Lens Quick Change System.",
+              alt: "Foggy alpine forest in flat light, suited to the S1 category 1 clear grey lens",
+            },
           ].map((img) => (
-            <figure key={img.label} className="relative">
+            <figure key={img.tag} className="bg-sand">
               <img
                 src={img.src}
                 alt={img.alt}
                 width={1024}
-                height={640}
+                height={512}
                 loading="lazy"
-                className="aspect-[16/10] w-full object-cover"
+                className="aspect-[2/1] w-full object-cover"
               />
-              <figcaption className="eyebrow absolute bottom-4 left-4 text-ink-foreground drop-shadow">
-                {img.label}
+              <figcaption className="p-6">
+                <p className="eyebrow text-brand">{img.tag}</p>
+                <h3 className="mt-2 font-display text-lg font-semibold">{img.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{img.body}</p>
               </figcaption>
             </figure>
           ))}
         </div>
+
+        <dl className="shell mt-8 grid grid-cols-2 gap-6 pb-16 sm:grid-cols-4">
+          {GOGGLE_FEATURES.map(({ icon: Icon, title, body }) => (
+            <div key={title}>
+              <Icon className="h-5 w-5" strokeWidth={1.4} />
+              <dt className="eyebrow mt-3">{title}</dt>
+              <dd className="mt-1 text-xs leading-relaxed text-muted-foreground">{body}</dd>
+            </div>
+          ))}
+        </dl>
       </section>
+
 
       {/* FAQ */}
       <section className="bg-sand">
