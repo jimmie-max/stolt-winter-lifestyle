@@ -1,6 +1,7 @@
 import { Link, createFileRoute } from "@tanstack/react-router";
 
 import { SectionHead } from "@/components/site/Sections";
+import st50CeInstructions from "@/assets/st-50-ce-instructions.pdf.asset.json";
 import { ST50 } from "@/lib/products";
 
 const TITLE = "ST-50 manual & support — Stolt of Sweden";
@@ -119,9 +120,18 @@ function ManualPage() {
               the two-compartment pouch, or the goggles in the hard EVA case.
             </li>
           </ol>
-          <p className="mt-6 bg-sand p-4 text-xs leading-relaxed text-muted-foreground">
-            The full printed manual PDF will be linked here — upload the file and link it from
-            this section.
+          <p className="mt-6 bg-sand p-4 text-sm leading-relaxed">
+            <a
+              href={st50CeInstructions.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-display font-semibold underline underline-offset-4 hover:text-primary"
+            >
+              Download ST-50 CE instructions & safety information (PDF)
+            </a>
+            <span className="mt-1 block text-xs text-muted-foreground">
+              EU Regulation 2016/425 · EN ISO 12312-1 · filter-category guide & care instructions
+            </span>
           </p>
         </div>
 
