@@ -61,7 +61,7 @@ function BootskiPage() {
   return (
     <>
       <section className="bg-ink text-ink-foreground">
-        <div className="shell py-16">
+        <div className="shell grid items-center gap-12 py-16 lg:grid-cols-2">
           <SectionHead eyebrow="Short skis · Bootski" title={<>Short skis.<br />Big fun.</>}>
             <p className="text-ink-foreground/75">
               BootSki is the world&apos;s smallest ski with a design patented design — a short
@@ -71,6 +71,13 @@ function BootskiPage() {
             </p>
 
           </SectionHead>
+          <img
+            src={bootskiInHand}
+            alt="A skier carrying a pair of black BootSki short skis in one hand on a sunny groomed slope — each ski barely longer than the sole of a ski boot"
+            width={1600}
+            height={1200}
+            className="aspect-[4/3] w-full object-cover"
+          />
         </div>
       </section>
 
