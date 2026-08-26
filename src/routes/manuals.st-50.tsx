@@ -1,6 +1,7 @@
 import { Link, createFileRoute } from "@tanstack/react-router";
 
 import { SectionHead } from "@/components/site/Sections";
+import st50CeInstructions from "@/assets/st-50-ce-instructions.pdf.asset.json";
 import { ST50 } from "@/lib/products";
 
 const TITLE = "ST-50 manual & support — Stolt of Sweden";
