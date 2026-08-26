@@ -42,10 +42,19 @@ function AboutPage() {
     <>
       <section className="bg-ink text-ink-foreground">
         <div className="shell py-20">
-          <SectionHead eyebrow="About" title={<>Compact skiing,<br />from Sweden.</>}>
-            <p className="text-ink-foreground/75">
-              Experience the moment. Compact skiing has never been easier. We are based in
-              Sweden and ship directly from Sweden.
+          <SectionHead eyebrow="About" title={<>A simple idea.<br />A better way to ski.</>}>
+            <p className="text-ink-foreground/75 max-w-3xl">
+              Skiing is about freedom. We believe the best turns are the effortless ones —
+              the ones that let you move however the mountain invites you.
+            </p>
+            <p className="text-ink-foreground/75 mt-4 max-w-3xl">
+              Stolt of Sweden grew out of that curiosity. As kids, Tobias and Oskar sawed
+              the tips off ordinary skis and sold the shorter versions to friends, chasing a
+              feeling that traditional gear could not deliver. That same spirit became
+              BootSki: a short, design-patented ski built this year to give skiers the
+              freedom to move naturally on the slope. Our vision is simple — create the
+              most fun skiing experience possible, without the limitation of long skis.
+              We are based in Sweden and ship directly from Sweden.
             </p>
           </SectionHead>
         </div>
