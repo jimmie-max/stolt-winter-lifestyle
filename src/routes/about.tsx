@@ -33,6 +33,7 @@ const PRESS = [
       "Leading the way with Stolt of Sweden: With 80,000 followers, the revolutionary Swedish Short Skis launch the new season.",
     author: "Angelo Bonorino",
     source: "Neve Italia",
+    url: "https://www.neveitalia.it/test/news/in-cima-alla-curva-con-stolt-of-sweden-con-80-000-followers-i-rivoluzionari-sci-corti-svedesi-lanciano-la-nuova-stagione",
   },
 ];
 
