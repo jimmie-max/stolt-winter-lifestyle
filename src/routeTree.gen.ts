@@ -16,6 +16,7 @@ import { Route as FaqRouteImport } from './routes/faq'
 import { Route as GogglesRouteImport } from './routes/goggles'
 import { Route as SizeGuideRouteImport } from './routes/size-guide'
 import { Route as ManualsSt50RouteImport } from './routes/manuals.st-50'
+import { Route as ProductsHandleRouteImport } from './routes/products.$handle'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -52,6 +53,11 @@ const ManualsSt50Route = ManualsSt50RouteImport.update({
   path: '/manuals/st-50',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ProductsHandleRoute = ProductsHandleRouteImport.update({
+  id: '/products/$handle',
+  path: '/products/$handle',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -61,6 +67,7 @@ export interface FileRoutesByFullPath {
   '/goggles': typeof GogglesRoute
   '/size-guide': typeof SizeGuideRoute
   '/manuals/st-50': typeof ManualsSt50Route
+  '/products/$handle': typeof ProductsHandleRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -70,6 +77,7 @@ export interface FileRoutesByTo {
   '/goggles': typeof GogglesRoute
   '/size-guide': typeof SizeGuideRoute
   '/manuals/st-50': typeof ManualsSt50Route
+  '/products/$handle': typeof ProductsHandleRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -80,6 +88,7 @@ export interface FileRoutesById {
   '/goggles': typeof GogglesRoute
   '/size-guide': typeof SizeGuideRoute
   '/manuals/st-50': typeof ManualsSt50Route
+  '/products/$handle': typeof ProductsHandleRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -91,6 +100,7 @@ export interface FileRouteTypes {
     | '/goggles'
     | '/size-guide'
     | '/manuals/st-50'
+    | '/products/$handle'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -100,6 +110,7 @@ export interface FileRouteTypes {
     | '/goggles'
     | '/size-guide'
     | '/manuals/st-50'
+    | '/products/$handle'
   id:
     | '__root__'
     | '/'
@@ -109,6 +120,7 @@ export interface FileRouteTypes {
     | '/goggles'
     | '/size-guide'
     | '/manuals/st-50'
+    | '/products/$handle'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -119,6 +131,7 @@ export interface RootRouteChildren {
   GogglesRoute: typeof GogglesRoute
   SizeGuideRoute: typeof SizeGuideRoute
   ManualsSt50Route: typeof ManualsSt50Route
+  ProductsHandleRoute: typeof ProductsHandleRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -172,6 +185,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ManualsSt50RouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/products/$handle': {
+      id: '/products/$handle'
+      path: '/products/$handle'
+      fullPath: '/products/$handle'
+      preLoaderRoute: typeof ProductsHandleRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -183,6 +203,7 @@ const rootRouteChildren: RootRouteChildren = {
   GogglesRoute: GogglesRoute,
   SizeGuideRoute: SizeGuideRoute,
   ManualsSt50Route: ManualsSt50Route,
+  ProductsHandleRoute: ProductsHandleRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
